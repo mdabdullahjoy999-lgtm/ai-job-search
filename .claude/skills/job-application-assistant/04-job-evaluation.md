@@ -20,9 +20,9 @@ How well do the required/preferred skills align with the candidate's capabilitie
 | 40-59 | Partial match, significant upskilling needed |
 | 0-39 | Fundamental mismatch |
 
-**Strong match areas:** [YOUR_PRIMARY_SKILLS]
-**Moderate match areas:** [YOUR_SECONDARY_SKILLS]
-**Weak match areas:** [SKILLS_YOU_LACK]
+**Strong match areas:** Python (Pandas, NumPy, scikit-learn, TensorFlow/Keras, LightGBM, XGBoost), SQL/BigQuery, classification/regression/clustering ML, statistical analysis, ETL/data pipelines, Power BI/Tableau
+**Moderate match areas:** Deep learning & NLP/GenAI (HuggingFace, LDA, sentiment analysis), cloud platforms beyond BigQuery, R
+**Weak match areas:** Production ML engineering / MLOps at scale, software engineering best practices (testing, CI/CD, deployment), domain-specific finance/commodities knowledge (e.g. derivatives, options theory)
 
 ### 2. Experience Match (0-100)
 Does work history align with what they're looking for?
@@ -34,9 +34,9 @@ Does work history align with what they're looking for?
 | 40-59 | Adjacent experience, would need to make the case |
 | 0-39 | Unrelated experience |
 
-**Strong:** [YOUR_DIRECT_EXPERIENCE_DOMAINS]
-**Moderate:** [YOUR_ADJACENT_EXPERIENCE]
-**Entry-level:** [ROLES_WITH_LIMITED_EXPERIENCE]
+**Strong:** Applied ML/data science project work (MSc dissertation, coursework, BCG X simulations) — data pipelines, model building, evaluation, stakeholder communication
+**Moderate:** Data analytics in a non-tech industry role (Merchandising Data Assistant — forecasting, dashboards, ETL) — transferable analytical and stakeholder-facing skills
+**Entry-level:** Any role expecting 2+ years of dedicated software/ML engineering employment; frame as strong graduate/internship candidate rather than experienced hire
 
 ### 3. Behavioral/Culture Fit (0-100)
 Does the role and company culture match the behavioral profile?
@@ -67,19 +67,19 @@ Does this role advance career goals and contain tasks that energize?
 | 0-39 | Dead end or backwards step |
 
 **Career goals:**
-- [YOUR_CAREER_GOAL_1]
-- [YOUR_CAREER_GOAL_2]
-- [YOUR_CAREER_GOAL_3]
+- Land a first industry role as Data Scientist / ML Engineer / AI Engineer in London or remote UK
+- Build production ML experience beyond academic and simulation projects
+- Deepen specialization within AI/ML/Data Science (open to healthcare ML or another vertical as opportunities emerge)
 
 **Motivation filter:** Evaluate not just whether you *can* do the tasks, but whether the tasks will *energize* you. Consider:
-- Tasks that energize: [YOUR_ENERGIZING_TASKS]
-- Tasks that drain: [YOUR_DRAINING_TASKS]
+- Tasks that energize: End-to-end model building, translating technical/statistical findings into plain-language recommendations, working on problems with real-world stakes
+- Tasks that drain: Not yet well-defined — revisit with `/setup --section experience`
 - Non-task factors: leadership style, department culture, company values, degree of autonomy
 
 **Life situation alignment:** Consider personal constraints:
-- **Security**: [YOUR_FINANCIAL_SITUATION_CONTEXT]
-- **Flexibility**: [YOUR_SCHEDULE_CONSTRAINTS]
-- **Professional development**: [YOUR_GROWTH_PRIORITIES]
+- **Security**: Currently a full-time MSc student (graduating Sept 2026); seeking internship or graduate-level roles compatible with study commitments where relevant
+- **Flexibility**: Open to hybrid/onsite London or remote UK-wide; pre-settled status under the EU Settlement Scheme means no sponsorship constraints
+- **Professional development**: Prioritizes roles offering genuine mentorship/growth given limited industry ML experience to date
 
 ### 6. Salary Benchmark (Optional)
 

@@ -109,12 +109,11 @@ Write 5-7 lines that function as an "elevator pitch": a concise, compelling intr
 
 **Create 2-3 profile statement templates for your main role types:**
 
-<!-- SETUP: These are populated based on your background -->
-**For [YOUR_PRIMARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_1]
+**For Data Scientist / ML Engineer roles:**
+> Data science MSc candidate who frames business and clinical problems as analytics questions, builds the models, and explains results in plain language to non-technical stakeholders. Architected an end-to-end ML system processing 400,000+ clinical records with rigorous evaluation (AUPRC, AUROC, SHAP), and applied the same approach to a live BCG X churn simulation, turning a 61-feature Random Forest model into a business recommendation and a named deployment risk. Proficient in Python, scikit-learn, TensorFlow, HuggingFace Transformers, and BigQuery.
 
-**For [YOUR_SECONDARY_ROLE_TYPE] roles:**
-> [YOUR_PROFILE_STATEMENT_TEMPLATE_2]
+**For AI Engineer / GenAI-focused roles:**
+> Data science MSc candidate combining applied machine learning with hands-on generative AI and NLP experience — from a rule-based financial-document chatbot built for BCG's GenAI Consulting team to a full sentiment/topic-modelling pipeline (VADER, NRCLex, LDA) over 13,000+ real-world comments. Comfortable moving between classical ML (Random Forest, XGBoost, SHAP) and LLM/NLP tooling (HuggingFace Transformers, prompt engineering) depending on what the problem needs.
 
 ### Core Competencies / Skills Section (Best Practice)
 Reorder and emphasize based on the role. Use bold category labels.

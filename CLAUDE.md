@@ -1,10 +1,7 @@
-# Job Application Assistant for [YOUR_NAME]
-
-<!-- SETUP: This file is populated by running /setup -->
-<!-- After running /setup, all [PLACEHOLDER] tokens will be replaced with your actual information -->
+# Job Application Assistant for MD Abdullah
 
 ## Role
-This repo is a job application workspace. Claude acts as a career advisor and application assistant for [YOUR_NAME], helping with:
+This repo is a job application workspace. Claude acts as a career advisor and application assistant for MD Abdullah, helping with:
 1. **Job fit evaluation** - Assess job postings against your profile (skills, experience, behavioral traits)
 2. **CV tailoring** - Adapt existing CV templates (LaTeX/moderncv) to target specific roles
 3. **Cover letter writing** - Draft targeted cover letters using existing templates (LaTeX)
@@ -16,65 +13,64 @@ This repo is a job application workspace. Claude acts as a career advisor and ap
 <!-- This section is auto-populated by /setup. You can also fill it in manually. -->
 
 ### Identity
-- **Name:** [YOUR_NAME]
-- **Location:** [YOUR_CITY], [YOUR_COUNTRY] ([YOUR_COMMUTE_CONSTRAINTS])
-- **Languages:** [YOUR_LANGUAGES]
-- **Status:** [YOUR_EMPLOYMENT_STATUS]
-- **LinkedIn headline:** "[YOUR_LINKEDIN_HEADLINE]"
+- **Name:** MD Abdullah
+- **Location:** London, United Kingdom (open to hybrid/onsite in London, or remote UK-wide)
+- **Right to work:** Pre-settled status under the EU Settlement Scheme (UK) — no sponsorship required
+- **Languages:** Bengali (native), English (professional working proficiency)
+- **Status:** Currently studying — MSc Data Science and Analytics, University of Westminster (Sept 2025 – Sept 2026), seeking internship or graduate-level roles
+- **LinkedIn headline:** "MSc Data Science candidate | AI/ML | Data Scientist"
 
 ### Education
-<!-- List your degrees, most recent first -->
-- **[DEGREE_LEVEL] in [FIELD]** ([YEAR_START]-[YEAR_END]) - [INSTITUTION]
-  - Thesis: "[THESIS_TITLE]"
-  - Topics: [KEY_TOPICS]
+- **MSc Data Science and Analytics** (2025-2026) - University of Westminster, London
+  - Dissertation: "ICU Readmission and Mortality Prediction with AI and Machine Learning" (MIMIC-IV v3.1, Google BigQuery)
+  - Topics: Data Mining & Machine Learning, Web & Social Media Analytics, Business Analytics, Big Data Theory and Practice, Data Warehousing and Business Intelligence
+- **BSc Textile Engineering, First Class Honours** (2016-2020) - Bangladesh University of Textiles
+  - Specialization: Apparel Engineering
 
 ### Professional Experience
-<!-- List your roles, most recent first -->
-- **[JOB_TITLE]** ([START_DATE] - [END_DATE]) - **[COMPANY]** ([LOCATION])
-  - [KEY_RESPONSIBILITY_1]
-  - [KEY_RESPONSIBILITY_2]
-  - [KEY_ACHIEVEMENT]
+- **Merchandising Data Assistant** (2021 - 2022) - **Quest Tex Solutions** (Dhaka, Bangladesh)
+  - Engineered Python and Excel ETL pipelines for 200+ SKUs, reducing manual processing time by 40%
+  - Built a statistical demand-forecasting model, improving forecast accuracy by 15% and cutting overstock costs by £8,000/month
+  - Developed Power BI dashboards delivering 6+ reports to 15+ stakeholders; maintained 99.2% data quality
+- **Data Science Virtual Experience Program** (2026) - **BCG X, Forage**
+  - Analyzed churn for 14,606 SME energy accounts (9.72% churn rate); engineered 61 features and trained a Random Forest classifier reaching 0.669 ROC-AUC
+  - Identified energy consumption and tenure as stronger churn drivers than price sensitivity; flagged low recall (~9%) as a deployment blocker
+- **GenAI Virtual Experience Program** (2026) - **BCG X, Forage**
+  - Built a rule-based financial chatbot prototype in Python (Pandas) for BCG's GenAI Consulting team, parsing 10-K/10-Q filings into plain-language answers
 
 ### Technical Skills
-- **Primary:** [YOUR_PRIMARY_SKILLS]
-- **Secondary:** [YOUR_SECONDARY_SKILLS]
-- **Domain:** [YOUR_DOMAIN_EXPERTISE]
-- **Software:** [YOUR_TOOLS_AND_SOFTWARE]
+- **Primary:** Python (Pandas, NumPy, scikit-learn, TensorFlow/Keras, LightGBM, XGBoost), SQL, Google BigQuery
+- **Secondary:** R, HuggingFace Transformers/BERT/T5/spaCy (NLP), Power BI, Tableau, Excel (Solver, PrecisionTree)
+- **Domain:** Clinical/healthcare ML (ICU outcome prediction), business analytics & decision analysis, quantitative/financial analysis (equity clustering, portfolio risk), operations research (linear programming)
+- **Software:** Google Colab, Git/GitHub, Jupyter
 
 ### Certifications
-<!-- List relevant certifications with dates -->
-- **[CERTIFICATION_NAME]** - [HOURS]h - completed [DATE]
+- **BCG X Data Science Job Simulation** - Forage - completed 2026
+- **BCG X GenAI Job Simulation** - Forage - completed 2026
 
 ### Publications
-<!-- List peer-reviewed publications, if any -->
-- [AUTHOR_LIST] ([YEAR]). [TITLE]. [JOURNAL].
+None yet.
 
 ### Awards
-<!-- List relevant awards, hackathons, competitions -->
-- [AWARD_NAME] - [EVENT] ([YEAR])
+None yet.
 
 ### Behavioral Profile
-<!-- Your behavioral assessment results (PI, DISC, Myers-Briggs, or self-assessment) -->
-- **[TRAIT_1]** - [DESCRIPTION]
-- **[TRAIT_2]** - [DESCRIPTION]
-- **Strengths:** [YOUR_STRENGTHS]
-- **Growth areas:** [YOUR_GROWTH_AREAS]
-- **Thrives in:** [YOUR_IDEAL_ENVIRONMENT]
+- **Structured autonomy** - Thrives with a clear problem and defined success criteria; comfortable bringing structure to ambiguous starting points (e.g. scoping a dissertation) through planning and milestones
+- **Deliberate, evidence-first decision-maker** - Defaults to testing assumptions and comparing metrics over gut calls; moves quickly on low-risk, time-boxed decisions
+- **Strengths:** Deep independent technical ownership (end-to-end modelling), clear and concise communication of technical work to non-technical audiences, coordinating a workstream within a larger team project
+- **Growth areas:** Limited industry (non-academic) production ML experience so far - actively building this through the MSc dissertation and virtual experience programs
+- **Thrives in:** Structured but intellectually demanding environments with clear problems and room to go deep
 
 ### What Excites You
-<!-- What motivates you professionally -->
-- [PASSION_1]
-- [PASSION_2]
+- Building end-to-end ML systems (data → model → interpretable results) for problems with real-world stakes
+- Translating technical/statistical findings into plain-language recommendations for non-technical stakeholders
 
 ### Target Sectors
-<!-- Industries and companies you're targeting -->
-- [SECTOR_1]: [EXAMPLE_COMPANIES]
-- [SECTOR_2]: [EXAMPLE_COMPANIES]
+- AI / Machine Learning / Data Science (primary): tech companies, consultancies, healthcare analytics
+- Open to adjacent sectors (e.g. energy/commodities analytics) where the quantitative toolkit transfers
 
 ### Deal-breakers
-<!-- Hard constraints on job search -->
-- [DEALBREAKER_1]
-- [DEALBREAKER_2]
+- None specified yet - open, revisit with `/setup --section experience` as preferences firm up
 
 ## Repo Structure
 - `cv/` - LaTeX CV variants (moderncv template, banking style)
