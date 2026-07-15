@@ -20,7 +20,9 @@ All CVs use the moderncv LaTeX package with the "banking" style and "blue" color
 cd cv && lualatex -interaction=nonstopmode main_<company>.tex
 ```
 
-Expected output: `Output written on main_<company>.pdf (2 pages, ...)`. Any page count other than 2 is a failure that must be fixed before presenting to the user.
+Expected output: `Output written on main_<company>.pdf (1 page, ...)`. Any page count other than 1 is a failure that must be fixed before presenting to the user.
+
+> **Note:** This candidate's profile uses a hard 1-page CV limit (changed from the framework's original 2-page default) for easier reviewer scanning. All page-count references below refer to 1 page.
 
 ## Document Structure
 
@@ -154,28 +156,17 @@ If there is a gap in your employment history:
 After writing the CV and before presenting to the user, always compile and visually inspect the PDF. Iterate until the layout is clean. Workflow:
 
 1. Run `lualatex -interaction=nonstopmode main_<company>.tex`
-2. Check the output page count: must be exactly 2
-3. Read the PDF via the Read tool and visually inspect both pages
-4. Check for **orphaned entries**: a `\cventry` title line must never sit alone at the bottom of page 1 with its bullets on page 2
+2. Check the output page count: must be exactly 1
+3. Read the PDF via the Read tool and visually inspect the page
+4. Check for **cut-off or cramped content**: nothing should be truncated or so tightly spaced it looks unreadable
 
 ### Fixing common page-break problems
 
-**Problem: entry title on page 1, bullets orphaned to page 2**
-Add `\needspace{5\baselineskip}` immediately before the problematic `\cventry`:
-```latex
-\needspace{5\baselineskip}
-\item{\cventry{YEAR--YEAR}{Role Title}{Organization}{Location}{}{...}}
-```
-Include `\usepackage{needspace}` in the preamble.
+**Problem: content spills to page 2**
+Cut content — do not compress geometry or `\vspace` to force-fit. See "Relevance-weighted cutting" below for the rule.
 
-**Problem: one trailing section spills to page 3 (e.g., References alone on page 3)**
-Add `\enlargethispage{2-3\baselineskip}` before a late section (e.g., before `\section{Honors and Awards}`) to stretch page 2 by a few lines. This is the standard LaTeX rescue for near-miss overflows.
-
-**Problem: 3 pages with significant content on page 3**
-Cut content — do not compress geometry or `\vspace`. See "Relevance-weighted cutting" below for the rule.
-
-**Problem: content finishes early on page 2 (feels thin)**
-Restore the highest-relevance item that was previously cut — a CV that ends mid-page 2 looks incomplete.
+**Problem: content finishes with a lot of empty space at the bottom of page 1 (feels thin)**
+Restore the highest-relevance item that was previously cut — a CV that ends a third of the way down the page looks incomplete.
 
 ## ATS Parseability
 
@@ -194,20 +185,21 @@ What to check in the extraction:
 - **Reading order.** The stock banking style is single-column, so extraction order matches visual order. Custom templates (via `/add-template`) with sidebars or multi-column layouts can interleave unrelated lines; if extraction order is scrambled, the user is trading ATS compatibility for looks and should be told.
 - **Keyword coverage.** Match the posting's required/preferred terms against the extracted text, in the posting's language. Prefer the posting's exact term over a synonym when it is truthfully applicable - ATS matching is often literal. Never add a keyword the profile does not support.
 
-## Page Budget - Hard 2-Page Limit
+## Page Budget - Hard 1-Page Limit
 
-The CV **must** fit on exactly 2 pages when compiled. Use these content limits as a guide:
+The CV **must** fit on exactly 1 page when compiled. Use these content limits as a guide:
 
 | Section | Max budget |
 |---------|-----------|
-| Profile statement | 3-4 lines |
-| Skills | 5 items, each 1-2 lines |
-| Most recent role | 4-5 bullets |
-| Previous role | 2-3 bullets |
-| Older roles | 2 bullets (1 line each) |
-| Education | 2-3 entries |
-| Publications | 2-3 entries |
-| Awards | 3 entries, single line each |
+| Profile statement | 2-3 lines |
+| Skills | 3-4 items, each 1 line |
+| Most recent role | 3 bullets |
+| Previous role | 2 bullets |
+| Older roles | 1 bullet, or omit |
+| Education | 2 entries, brief |
+| Publications | Omit unless directly relevant |
+| Awards | Omit unless directly relevant |
+| Projects | 1-2 entries max, only if there's room |
 | References | "Available upon request." (single line) |
 
 **If in doubt, cut rather than squeeze.** Reducing `\vspace` or geometry scale to force-fit content makes the CV look cramped.
@@ -237,7 +229,7 @@ Cut the lowest-total-score line first, regardless of which section it sits in.
 
 - Do not mechanically cut from the bottom of a static section list without checking relevance. "Cut the oldest role first" is wrong if that role is literally about the skill the posting asks for.
 - Do not cut the one concrete example the cover letter leans on. Relevance is measured against the cover letter you wrote, not just the job posting — interviewers will have read both.
-- Do not cut to fit if the fit is borderline (2.02 pages). Prefer `\enlargethispage{2-3\baselineskip}` on a late section for near-misses; reserve content cuts for genuine overflow (content on page 3 that is more than a single trailing section).
+- Do not cut to fit if the fit is borderline (spilling a line or two onto page 2). Prefer `\enlargethispage{2-3\baselineskip}` for near-misses; reserve content cuts for genuine overflow.
 
 ## Recommended Section Order
 

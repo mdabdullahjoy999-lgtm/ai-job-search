@@ -5,6 +5,7 @@
 %% SETUP: Run /setup to populate this with your actual information.
 %% Compile with: lualatex main_example.tex
 %% (pdflatex often fails on modern MiKTeX with fontawesome5 font-expansion errors.)
+%% This candidate's profile uses a hard 1-page CV limit (see 05-cv-templates.md).
 
 \documentclass[11pt,a4paper,sans]{moderncv}
 \moderncvstyle{banking}
@@ -13,8 +14,8 @@
 % Force both first and last name AND section headings to render in moderncv
 % blue (color1). Default banking on lualatex+MiKTeX leaves these black, which
 % looks inconsistent with the rest of the blue accent scheme.
-\renewcommand*{\firstnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
-\renewcommand*{\lastnamestyle}[1]{{\fontsize{34}{36}\bfseries\upshape\color{color1}#1}}
+\renewcommand*{\firstnamestyle}[1]{{\fontsize{28}{30}\bfseries\upshape\color{color1}#1}}
+\renewcommand*{\lastnamestyle}[1]{{\fontsize{28}{30}\bfseries\upshape\color{color1}#1}}
 \renewcommand*{\sectionstyle}[1]{{\sectionfont\color{color1}#1}}
 
 \usepackage[utf8]{inputenc}
@@ -27,7 +28,7 @@
     pdftitle={MD Abdullah - CV},
     pdfpagemode=FullScreen,
 }
-\usepackage[scale=0.80]{geometry}
+\usepackage[scale=0.85, top=1.1cm, bottom=1.1cm]{geometry}
 \usepackage{import}
 
 % personal data
@@ -45,8 +46,8 @@
 %     PROFILE STATEMENT
 % ============================================================
 
-\vspace{6pt}
-\small{Data science MSc candidate who frames business and clinical problems as analytics questions, builds the models, and explains results in plain language to non-technical stakeholders. Architected an end-to-end ML system processing 400,000+ clinical records with rigorous evaluation (AUPRC, AUROC, SHAP), and applied the same approach to a live BCG X churn simulation, turning a 61-feature Random Forest model into a business recommendation and a named deployment risk. Proficient in Python, scikit-learn, TensorFlow, HuggingFace Transformers, and BigQuery.}
+\vspace{2pt}
+\small{Data science MSc candidate who frames business and clinical problems as analytics questions, builds the models, and explains results in plain language to non-technical stakeholders. Proficient in Python, scikit-learn, TensorFlow, HuggingFace Transformers, and BigQuery.}
 
 % ============================================================
 %     CORE COMPETENCIES
@@ -56,15 +57,13 @@
 \vspace{1pt}
 \begin{itemize}
 
-\item \textbf{Machine Learning}: scikit-learn, TensorFlow/Keras, LightGBM, XGBoost, GridSearchCV, StratifiedGroupKFold, SHAP
+\item \textbf{Machine Learning}: scikit-learn, TensorFlow/Keras, XGBoost, GridSearchCV, SHAP
 
-\item \textbf{Generative AI \& NLP}: HuggingFace Transformers, BERT, T5, spaCy, VADER, NRCLex, LDA, prompt engineering
+\item \textbf{Generative AI \& NLP}: HuggingFace Transformers, prompt engineering, LDA, VADER
 
-\item \textbf{Data Engineering \& Evaluation}: Pandas, NumPy, ETL pipelines, feature engineering, AUPRC, AUROC, F1/F2, Brier score
+\item \textbf{Data Engineering}: Pandas, NumPy, ETL pipelines, Google BigQuery, SQL
 
-\item \textbf{Statistical Analysis}: hypothesis testing (Chi-Square, Fisher's Exact, t-tests), regression diagnostics (VIF, Durbin-Watson), decision analysis, linear programming
-
-\item \textbf{Cloud \& Tools}: Google BigQuery, Google Colab, Git/GitHub, Power BI, Tableau, SQL
+\item \textbf{Statistical Analysis}: hypothesis testing, regression diagnostics, decision analysis
 
 \end{itemize}
 
@@ -73,32 +72,30 @@
 % ============================================================
 
 \section{Professional Experience}
-\vspace{3pt}
+\vspace{2pt}
 \begin{itemize}
 
 % --- BCG X Data Science Virtual Experience ---
 \item{\cventry{2026}{Data Science Virtual Experience Program}{BCG X, Forage}{Remote}{}{\vspace{1pt}
 \begin{itemize}
-    \item Analyzed churn for 14,606 SME energy accounts (9.72\% churn rate), scoping which client data mattered most before building a model
-    \item Engineered 61 features from consumption, pricing, and tenure data; trained a Random Forest classifier reaching 0.669 ROC-AUC
-    \item Found energy consumption and tenure outweighed price sensitivity as churn drivers; flagged low recall (approx.\ 9\%) as a deployment blocker in the executive summary
+    \item Analyzed churn for 14,606 SME energy accounts; engineered 61 features and trained a Random Forest classifier reaching 0.669 ROC-AUC
+    \item Flagged low recall (approx.\ 9\%) as a deployment blocker in the executive summary, prioritizing honest business communication
 \end{itemize}}}
 
-\vspace{3pt}
+\vspace{2pt}
 
 % --- BCG X GenAI Virtual Experience ---
 \item{\cventry{2026}{GenAI Virtual Experience Program}{BCG X, Forage}{Remote}{}{\vspace{1pt}
 \begin{itemize}
-    \item Built a rule-based financial chatbot prototype in Python (Pandas) for BCG's GenAI Consulting team, parsing 10-K/10-Q filings into plain-language, conversational answers for non-technical users
+    \item Built a rule-based financial chatbot prototype in Python (Pandas) for BCG's GenAI Consulting team, parsing 10-K/10-Q filings into plain-language answers
 \end{itemize}}}
 
-\vspace{3pt}
+\vspace{2pt}
 
 % --- Merchandising Data Assistant ---
 \item{\cventry{2021--2022}{Merchandising Data Assistant}{Quest Tex Solutions}{Dhaka, Bangladesh}{}{\vspace{1pt}
 \begin{itemize}
     \item Engineered Python and Excel ETL pipelines for 200+ SKUs, reducing manual processing time by 40\%
-    \item Optimized demand forecasting by 15\%; reduced overstock costs by £8,000/month via statistical analysis
     \item Developed Power BI dashboards delivering 6+ reports to 15+ stakeholders; maintained 99.2\% data quality
 \end{itemize}}}
 
@@ -113,69 +110,23 @@
 \begin{itemize}
 
 \item{\cventry{2025--2026}{MSc in Data Science and Analytics}{University of Westminster}{London, United Kingdom}{}{\vspace{1pt}
-Dissertation: ``ICU Readmission and Mortality Prediction with AI and Machine Learning.'' End-to-end ML system on MIMIC-IV v3.1 (400,000+ records) via Google BigQuery; 8 algorithms evaluated with SHAP interpretability, achieving AUPRC 0.65+.
+Dissertation: ICU readmission/mortality prediction, MIMIC-IV v3.1 (400,000+ records) via BigQuery, AUPRC 0.65+.
 }}
 
-\vspace{3pt}
+\vspace{2pt}
 
-\item{\cventry{2016--2020}{BSc in Textile Engineering, First Class Honours}{Bangladesh University of Textiles}{Dhaka, Bangladesh}{}{\vspace{1pt}
-Specialization: Apparel Engineering.
-}}
+\item{\cventry{2016--2020}{BSc in Textile Engineering, First Class Honours}{Bangladesh University of Textiles}{Dhaka, Bangladesh}{}{}}
 
 \end{itemize}
 
 % ============================================================
-%     LANGUAGES
+%     LANGUAGES & REFERENCES
 % ============================================================
 
-\section{Languages}
+\section{Languages \& References}
 \vspace{1pt}
 \begin{itemize}
-\item Bengali (native), English (professional working proficiency).
-\end{itemize}
-
-% ============================================================
-%     SELECTED ACADEMIC PROJECTS
-% ============================================================
-
-\section{Selected Academic Projects}
-\vspace{1pt}
-\begin{itemize}
-
-\item \textbf{Loan Approval Prediction} (Data Mining \& Machine Learning): Naive Bayes, Logistic Regression, and Random Forest classifiers for loan approval status, tuned via GridSearchCV; Decision Tree Regressors for approved-loan amount prediction.
-
-\item \textbf{Sam Altman YouTube Comment NLP Analysis} (Web \& Social Media Analytics): End-to-end pipeline over 13,648 English comments (YouTube Data API v3); VADER sentiment, NRCLex emotion detection, and LDA topic modeling identifying 58\% negative sentiment polarization.
-
-\item \textbf{S\&P 500 Stock Segmentation \& Investment Analysis} (Data Warehousing): Agglomerative and K-Means clustering of 496 constituents; built a risk-diversified 20-stock portfolio (weighted Beta 0.91) and a ROLAP star schema in SQLite.
-
-\end{itemize}
-
-% ============================================================
-%     LEADERSHIP & COMMUNICATION
-% ============================================================
-
-\section{Leadership \& Communication}
-\vspace{1pt}
-\begin{itemize}
-
-\item \textbf{General Secretary, BUTEX Student Union}: Represented student interests to faculty administration; coordinated union events.
-
-\item \textbf{President, BUTEX IT Society}: Organized technical workshops and speaker sessions; set society direction.
-
-\item \textbf{Stakeholder Reporting, Quest Tex Solutions}: Presented forecasting and dashboard results directly to 15+ stakeholders.
-
-\item \textbf{Project Management}: Managed a 400,000+ record dissertation alongside 4 concurrent coursework projects against fixed deadlines.
-
-\end{itemize}
-
-% ============================================================
-%     REFERENCES
-% ============================================================
-
-\section{References}
-\vspace{1pt}
-\begin{itemize}
-\item{Available upon request.}
+\item Bengali (native), English (professional working proficiency). References available upon request.
 \end{itemize}
 
 \end{document}
